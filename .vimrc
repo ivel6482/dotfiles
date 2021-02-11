@@ -16,4 +16,3 @@
  15 set relativenumber
  16 syntax on
  17 colorscheme onedark
-~                         
