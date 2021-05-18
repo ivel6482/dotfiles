@@ -1,0 +1,6 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdowm"
+  ]
+}
