@@ -9,4 +9,6 @@
 - Navigation
   - z
 
-
+## TODO
+- Include i3 config
+- Include gitconfig
