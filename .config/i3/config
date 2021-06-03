@@ -194,3 +194,4 @@ gaps inner 10
 
 # Compton
 exec compton -f
+exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
