@@ -198,7 +198,15 @@ for_window [class="^.*"] border pixel 2
 gaps inner 10
 
 # Compton
+<<<<<<< HEAD
 exec_always compton -f
 
 # Wallpaper
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+=======
+exec compton -f
+exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+
+# Open windows in floating mode
+for_window [class="Nemo"] floating enable
+>>>>>>> 3a769c73b3e15f8a284828056619e1cd306f6126
