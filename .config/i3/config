@@ -13,7 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 12
+# font pango:monospace 12
+font pango:VictorMono Nerd Font Regular 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -44,11 +45,11 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -show-icons
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -106,16 +107,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: firefox "
-set $ws2 "2: dev "
-set $ws3 "3: chats"
-set $ws4 "4: music"
+set $ws1 "1: firefox  "
+set $ws2 "2: dev  "
+set $ws3 "3: api  "
+set $ws4 "4: database  "
 set $ws5 "5"
-set $ws6 "6"
+set $ws6 "6: random"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9: chats  "
+set $ws10 "10: music  "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -144,6 +145,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # open windows on respective workspace
 # use xprop to 
 assign [class="Firefox"] $ws1
+assign [class="Code"] $ws2
+assign [class="Insomnia"] $ws3
+assign [class="MongoDB Compass"] $ws4
+assign [class="Signal"] $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -193,4 +198,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 10
 
 # Compton
-exec compton -f
+exec_always compton -f
+
+# Wallpaper
+exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
