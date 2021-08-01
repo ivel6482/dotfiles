@@ -202,7 +202,7 @@ gaps inner 10
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always bash ~/.config/polybar/launch.sh --forest
 
 # Picom
 exec_always picom
