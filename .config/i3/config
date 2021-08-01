@@ -201,7 +201,12 @@ gaps inner 10
 # Wallpaper
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
 
+# Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Picom
+exec_always picom
+
 
 # Open windows in floating mode
 for_window [class="Nemo"] floating enable
