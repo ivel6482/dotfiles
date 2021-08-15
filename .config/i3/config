@@ -186,10 +186,11 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position bottom
-}
+# bar {
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#        position bottom
+#         status_command i3status
+# }
 
 # Remove titlebars
 for_window [class="^.*"] border pixel 2
@@ -197,16 +198,15 @@ for_window [class="^.*"] border pixel 2
 # Gaps
 gaps inner 10
 
-# Compton
-<<<<<<< HEAD
-exec_always compton -f
-
 # Wallpaper
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
-=======
-exec compton -f
-exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+
+# Polybar
+exec_always bash ~/.config/polybar/launch.sh --forest
+
+# Picom
+exec_always picom
+
 
 # Open windows in floating mode
 for_window [class="Nemo"] floating enable
->>>>>>> 3a769c73b3e15f8a284828056619e1cd306f6126
