@@ -23,3 +23,15 @@ nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+" Underline based on upper line length
+noremap <silent> <leader>ul mmyypVr-<Esc>`m
+
+" Print current date and time
+noremap <silent> <leader>date "_"=strftime("%F")<CR>p9h
+noremap <silent> <leader>time "_"=strftime("%X")<CR>p7h
+
+" Move lines
+noremap <silent> <C-j> :move -2<CR>
+noremap <silent> <C-k> :move +1<CR>
+
