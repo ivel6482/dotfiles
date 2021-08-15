@@ -139,6 +139,9 @@ echo "Successfully installed postgresql..."
 
 
 # install bat
+
+sudo apt install bat -y
+
 # install obs
 # install firefox-dev
 # install mongodb-compass
