@@ -69,12 +69,12 @@ if exists("&termguicolors") && exists("&winblend")
 	set winblend=0
 	set wildoptions=pum
 	set pumblend=5
-	set background=dark
-  colorscheme material
-  " options: 'default' | 'palenight' | 'ocean' | 'ligther' | 'darker' |
-  " 'defualt community' | 'palenight-community' | 'ocean-community' |
-  " 'lighter-community' | 'darker-community'
-  " let g:material_theme_style = 'ocean' 
+
+  " Oceanic
+  let g:material_style='oceanic'
+  set background=dark
+  colorscheme vim-material
+
   
   " enable italics
   let g:material_terminal_italics = 1
