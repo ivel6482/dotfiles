@@ -1,0 +1,12 @@
+[user]
+	email = velez.ilder@gmail.com
+	name = Ilder Velez
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+	ui = auto
+[core]
+	editor = nvim

@@ -6,8 +6,9 @@
 - Tide - Prompt
 - `z` - Directory jumping
 - Exa - `ls` replacement 
+- Fish NVM - nvm port for fish
 
 ## TODO
-- Include i3 config
 - Include gitconfig
 - Add links to readme
+- Try Starship prompt
