@@ -72,12 +72,58 @@ sudo apt-get update; \
   sudo apt-get install -y dotnet-sdk-5.0
 
 # install mongodb
-# install vscode
-# install insomnia
+
+echo "Installing mongodb..."
+apt update
+# https://repo.mongodb.org/apt/ubuntu/dists/focal/mongodb-org/5.0/multiverse/binary-amd64/mongodb-org-server_5.0.2_amd64.deb
+echo "Successfully installed mongodb"
+
+
+echo "Installing mongodb-compass..."
+apt update
+# https://downloads.mongodb.com/compass/mongodb-compass_1.28.1_amd64.deb
+echo "Successfully installed mongodb-compass"
+
+
+
 # install signal
-# install discord
+
+echo "Installing signal..."
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null -y
+
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list -y
+
+sudo apt update && sudo apt install signal-desktop -y
+echo "Successfully installed signal"
+
 # install i3-gaps
+
+echo "Installing i3-gaps..."
+sudo add-apt-repository ppa:regolith-linux/release -y
+sudo apt update -y
+sudo apt install i3-gaps -y
+echo "Successfully installed i3-gaps"
+
 # install polybar
+
+echo "Installing polybar..."
+apt install build-essential git cmake cmake-data pkg-config python3-sphinx python3-packaging libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev -y
+apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y
+git clone --recursive https://github.com/polybar/polybar
+cd polybar
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+# Optional. This will install the polybar executable in /usr/local/bin
+sudo make install
+cd ..
+echo "Successfully installed polybar"
+
+# install picom
+
 # install bat
 # install obs
 # install firefox-dev
@@ -100,3 +146,10 @@ sudo apt-get update; \
 # install rofi
 # install papirus
 
+# TODO(ivel): Research how to install these programs automatically
+# install vscode
+# install discord
+
+# install insomnia
+
+# https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website
