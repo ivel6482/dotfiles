@@ -69,3 +69,21 @@ echo "NVM: Successfully installed latest node version"
 # install i3-gaps
 # install polybar
 # install bat
+# install obs
+# install firefox-dev
+# install mongodb-compass
+# install anki
+# install syncthing and sync
+# install nextcloud
+# install spotify
+# install slack
+# install pomotroid
+# install node
+# install npm
+# install commitizen
+# install typescript
+# install gimp
+# install joplin
+# install keepass
+# install ungoogled-chromium
+
