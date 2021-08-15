@@ -17,6 +17,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 echo "Successfully installed vim-plug (neovim)..."
 
+# Material ocean theme (gnome-terminal)
+echo "Installing material ocean dark theme (gnome-terminal)"
+bash -c "$(wget -qO- https://git.io/vQgMr)"
+134
+echo "Successfully installed material ocean dark theme (gnome-terminal)..."
+
 # Fish shell
 
 echo "Installing fish shell"
@@ -124,6 +130,14 @@ echo "Successfully installed polybar"
 
 # install picom
 
+# install postgresql
+
+echo "Installing postgresql..."
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+echo "Successfully installed postgresql..."
+
+
 # install bat
 # install obs
 # install firefox-dev
@@ -142,7 +156,7 @@ echo "Successfully installed polybar"
 # install joplin
 # install keepass
 # install ungoogled-chromium
-# install postgresql
+
 # install rofi
 # install papirus
 
