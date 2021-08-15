@@ -23,6 +23,12 @@ set laststatus=2
 set scrolloff=10
 set expandtab
 set shell=fish
+set showmode
+set tabstop=4
+set incsearch
+set sidescroll=999
+set scrolloff=999
+set wildmenu
 " set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution
