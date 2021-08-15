@@ -191,7 +191,6 @@ sudo apt-get update
 sudo apt-get install papirus-icon-theme
 echo "Successfully installed papirus icons"
 
-# install ungoogled-chromium
 
 # TODO(ivel): Research how to install these programs automatically
 # install vscode
@@ -203,6 +202,8 @@ echo "Successfully installed papirus icons"
 # install pomotroid
 # install gimp
 # install keepass
+
+# install ungoogled-chromium (flatpak)
 
 # install insomnia
 # https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website
