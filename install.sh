@@ -198,6 +198,14 @@ echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium mai
 sudo apt update && sudo apt install codium -y
 echo "Successfully installed vscodium"
 
+# install ungoogled-chromium
+echo "Installing ungoogled-chromium..."
+echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | sudo tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+sudo apt update
+sudo apt install -y ungoogled-chromium
+echo "Successfully installed ungoogled-chromium"
+
 # TODO(ivel): Research how to install these programs automatically
 # install vscode
 # install discord
@@ -209,7 +217,6 @@ echo "Successfully installed vscodium"
 # install gimp
 # install keepass
 
-# install ungoogled-chromium (flatpak)
 
 # install insomnia
 # https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website
