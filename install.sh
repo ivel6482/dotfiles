@@ -209,7 +209,7 @@ sudo apt install -y ungoogled-chromium
 echo "Successfully installed ungoogled-chromium"
 
 # TODO(ivel): Research how to install these programs automatically
-# Use wget
+# Use wget -C (The -C flag tells wget to resume download if connection is lost)
 # install vscode
 # install discord
 # install firefox-dev
