@@ -53,13 +53,15 @@ nvm install latest
 echo "NVM: Successfully installed latest node version"
 
 # Exa
-# cd ~/Downloads
-# https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-# unzip insert name here
-# cd bin
-# mv exa /usr/local/bin
+echo "Installing exa..."
+cd ~/Downloads
+wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+unzip exa-linux-x86_64-v0.10.0.zip
+cd bin
+mv exa /usr/local/bin
+cd ~/Documents/dotfiles
+echo "Successfully installed exa"
 
-# TODO
 # install dotnet sdk
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
@@ -207,6 +209,7 @@ sudo apt install -y ungoogled-chromium
 echo "Successfully installed ungoogled-chromium"
 
 # TODO(ivel): Research how to install these programs automatically
+# Use wget
 # install vscode
 # install discord
 # install firefox-dev
