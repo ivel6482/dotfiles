@@ -1,3 +1,5 @@
+let mapleader = " "
+
 " Tabs
 nmap te :tabedit 
 nmap <S-Tab> :tabprev<Return>
