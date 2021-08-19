@@ -42,3 +42,5 @@ noremap <silent> <leader>time "_"=strftime("%X")<CR>p7h
 noremap <silent> <C-j> :move -2<CR>
 noremap <silent> <C-k> :move +1<CR>
 
+" Copy till end
+noremap Y y$
