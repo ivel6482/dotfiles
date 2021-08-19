@@ -7,6 +7,7 @@ call plug#begin()
   Plug 'tpope/vim-rhubarb'
   Plug 'cohama/lexima.vim'
   Plug 'hzchirs/vim-material'
+  Plug 'machakann/vim-highlightedyank'
 
   if has('nvim')
     Plug 'neovim/nvim-lspconfig'
