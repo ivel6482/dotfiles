@@ -50,6 +50,7 @@ echo "Successfully installed fish plugins"
 # NVM
 echo "NVM: Installing latest node version"
 nvm install latest
+nvm use latest
 echo "NVM: Successfully installed latest node version"
 
 # Exa
@@ -208,6 +209,14 @@ sudo apt update
 sudo apt install -y ungoogled-chromium
 echo "Successfully installed ungoogled-chromium"
 
+# install pandoc
+echo "Installing pandoc..."
+sudo apt install pandoc -y
+echo "Installing texlive for PDF output..."
+sudo apt install texlive -y
+echo "Successfully installed texlive"
+echo "Successfully installed pandoc"
+
 # TODO(ivel): Research how to install these programs automatically
 # Use wget -C (The -C flag tells wget to resume download if connection is lost)
 # install vscode
@@ -219,6 +228,7 @@ echo "Successfully installed ungoogled-chromium"
 # install pomotroid
 # install gimp
 # install keepass
+# install microsoft teams
 
 
 # install insomnia
