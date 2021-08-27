@@ -51,7 +51,6 @@ set nowrap
 set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
-
 " add asterisks in block comments
 set formatoptions+=r
 set cursorline
