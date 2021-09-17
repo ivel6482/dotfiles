@@ -1,36 +1,63 @@
-call plug#begin('~/.vim/plugged/')
-	Plug 'joshdick/onedark.vim'
-	Plug 'sheerun/vim-polyglot'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'dense-analysis/ale'
-	Plug 'majutsushi/tagbar'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'mhinz/vim-signify'
-	Plug 'ap/vim-css-color'
-	Plug 'ulwlu/elly.vim'
-	Plug 'vim-airline/vim-airline'
-	Plug 'hzchirs/vim-material'
-call plug#end()
+" Set leader
+let mapleader=' '
 
-set termguicolors
-set noshowmode
+"-----------------------------
+" Tabs
 
-set laststatus=2
-set relativenumber
-syntax on
+" Open current directory
+nmap te :tabedit 
+nmap <S-Tab> :tabprev<Return>
+nmap <Tab> :tabnext<Return>
 
+"------------------------------
+" Windows
 
-set nocompatible
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+" Move window
+nmap <Space> <C-w>w
+map s<left> <C-w>h
+map s<up> <C-w>k
+map s<down> <C-w>j
+map s<right> <C-w>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+" Resize window
+nmap <C-w><left> <C-w><
+nmap <C-w><right> <C-w>>
+nmap <C-w><up> <C-w>+
+nmap <C-w><down> <C-w>-
 
-" air-line
+" Underline based on upper line lengths
+noremap <silent> <leader>ul mmyypVr-<Esc>`m
 
-let g:airline_theme='material'
-let g:material_style='oceanic'
-let g:airline_powerline_fonts = 1
+" Print current date and time
+noremap <silent> <leader>date "_"=strftime("%F")<CR>p9h
+noremap <silent> <leader>time "_"=strftime("%X")<CR>p7h
 
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
+" Move lines
+noremap <silent> <C-j> :move -2<CR>
+noremap <silent> <C-k> :move +1<CR>
 
-set background=dark
-colorscheme vim-material
+set showmode
+" set noswapfile
+set tabstop=4
+set incsearch
+set sidescroll=999
+set scrolloff=999
+set wildmenu
+
+" Copy till the end of line
+map Y y$
+
+" Enter visual block mode
+nnoremap q <c-v>
+
+" Case insentive search
+set ignorecase
+
+" Will make a case sensitive search if we include \C
+set smartcase
