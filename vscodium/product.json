@@ -1,0 +1,12 @@
+// path to product.json
+// linux: /usr/share/vscodium-bin/resources/app/product.json
+// windows: ??
+// mac: Finder -> Applications -> VSCodium (right click) -> 
+// Show Package Contents -> Contents/Resources/app/product.json
+
+// Add to product.json
+
+"extensionsGallery": {
+  "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "itemUrl": "https://marketplace.visualstudio.com/items"
+}

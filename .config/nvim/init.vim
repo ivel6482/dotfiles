@@ -23,6 +23,12 @@ set laststatus=2
 set scrolloff=10
 set expandtab
 set shell=fish
+set showmode
+set tabstop=4
+set incsearch
+set sidescroll=999
+set scrolloff=999
+set wildmenu
 " set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution
@@ -45,7 +51,6 @@ set nowrap
 set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
-
 " add asterisks in block comments
 set formatoptions+=r
 set cursorline
@@ -69,12 +74,12 @@ if exists("&termguicolors") && exists("&winblend")
 	set winblend=0
 	set wildoptions=pum
 	set pumblend=5
-	set background=dark
-  colorscheme material
-  " options: 'default' | 'palenight' | 'ocean' | 'ligther' | 'darker' |
-  " 'defualt community' | 'palenight-community' | 'ocean-community' |
-  " 'lighter-community' | 'darker-community'
-  " let g:material_theme_style = 'ocean' 
+
+  " Oceanic
+  let g:material_style='oceanic'
+  set background=dark
+  colorscheme vim-material
+
   
   " enable italics
   let g:material_terminal_italics = 1
