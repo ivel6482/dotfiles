@@ -67,3 +67,9 @@ set ignorecase
 
 " Will make a case sensitive search if we include \C
 set smartcase
+
+" Allows to increase letters using Ctrl - A
+set nrformats=alpha
+
+" Set clipboard to OS clipboard for Windows
+set clipboard=unnamed
