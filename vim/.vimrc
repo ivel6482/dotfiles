@@ -42,6 +42,12 @@ noremap <silent> <leader>time "_"=strftime("%X")<CR>p7h
 noremap <silent> <C-j> :move -2<CR>
 noremap <silent> <C-k> :move +1<CR>
 
+" Renumarate ordered lists in visual mode. Set cursor below the newly placed item and run this keybind
+vnoremap <silent> <leader>rn :norm <C-v> <C-a><CR>
+
+" Conceal markdown tags
+set conceallevel=2
+
 set showmode
 " set noswapfile
 set tabstop=4
