@@ -64,7 +64,7 @@ set wildmenu
 map Y y$
 
 " Enter visual block mode by pressing q
-nnoremap q <c-v>
+nnoremap <leader>q <C-V>
 
 " Case insensitive search
 set ignorecase
