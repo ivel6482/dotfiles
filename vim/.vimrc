@@ -87,3 +87,7 @@ nmap <F1> <>
 
 " Display an underline in the line the cursor is
 set cursorline
+
+" Allows cursor to move up and down by display lines instead of file lines
+nnoremap j gj
+nnoremap k gk
