@@ -84,3 +84,6 @@ endif
 
 " Disable help
 nmap <F1> <>
+
+" Display an underline in the line the cursor is
+set cursorline
