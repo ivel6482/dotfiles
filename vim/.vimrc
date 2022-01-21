@@ -71,5 +71,11 @@ set smartcase
 " Allows to increase letters using Ctrl - A
 set nrformats=alpha
 
-" Set clipboard to OS clipboard for Windows
+" Set clipboard to OS clipboard
 set clipboard=unnamed
+
+if s:uname == "Linux"
+	set clipboard=unnamedplus
+endif
+
+
