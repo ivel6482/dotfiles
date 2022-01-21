@@ -1,3 +1,6 @@
+" Get the OS
+let s:uname = system("echo -n \"$(uname)\"")
+
 " Set leader
 let mapleader=' '
 
