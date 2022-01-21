@@ -16,8 +16,9 @@ nmap <Tab> :tabnext<Return>
 " Windows
 
 " Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+nnoremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<CR>
+
 " Move window
 nmap <Space> <C-w>w
 map s<left> <C-w>h
