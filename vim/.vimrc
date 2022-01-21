@@ -82,4 +82,5 @@ if s:uname == "Linux"
 	set clipboard=unnamedplus
 endif
 
-
+" Disable help
+nmap <F1> <>
