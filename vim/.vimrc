@@ -1,3 +1,6 @@
+" Get the OS
+let s:uname = system("echo -n \"$(uname)\"")
+
 " Set leader
 let mapleader=' '
 
@@ -13,8 +16,9 @@ nmap <Tab> :tabnext<Return>
 " Windows
 
 " Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+nnoremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<CR>
+
 " Move window
 nmap <Space> <C-w>w
 map s<left> <C-w>h
@@ -42,6 +46,12 @@ noremap <silent> <leader>time "_"=strftime("%X")<CR>p7h
 noremap <silent> <C-j> :move -2<CR>
 noremap <silent> <C-k> :move +1<CR>
 
+" Renumarate ordered lists in visual mode. Set cursor below the newly placed item and run this keybind
+vnoremap <silent> <leader>rn :norm <C-v> <C-a><CR>
+
+" Conceal markdown tags
+set conceallevel=2
+
 set showmode
 " set noswapfile
 set tabstop=4
@@ -54,10 +64,30 @@ set wildmenu
 map Y y$
 
 " Enter visual block mode by pressing q
-nnoremap q <c-v>
+nnoremap <leader>q <C-V>
 
 " Case insensitive search
 set ignorecase
 
 " Will make a case sensitive search if we include \C
 set smartcase
+
+" Allows to increase letters using Ctrl - A
+set nrformats=alpha
+
+" Set clipboard to OS clipboard
+set clipboard=unnamed
+
+if s:uname == "Linux"
+	set clipboard=unnamedplus
+endif
+
+" Disable help
+nmap <F1> <>
+
+" Display an underline in the line the cursor is
+set cursorline
+
+" Allows cursor to move up and down by display lines instead of file lines
+nnoremap j gj
+nnoremap k gk
