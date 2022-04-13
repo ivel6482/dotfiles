@@ -59,10 +59,7 @@ sudo mv ./nvim.appimage /usr/local/bin/nvim
 
 # Lunar Vim
 # If lunar vim installed skip it
-bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release) 
-
-# @@@ TODO: Can we pass -y flag to skip questions?
-LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh) -y
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y
 
 # @@@ TODO: If file contains these lines, skip it.
 lvim_alias="alias lvim='/home/manquito/.local/bin/lvim'"
