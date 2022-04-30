@@ -11,3 +11,10 @@
       - tmux
       - neofetch
     state: latest
+
+- name: Install github3 library
+  pip:
+    name:
+      - github3.py
+    state: latest
+
