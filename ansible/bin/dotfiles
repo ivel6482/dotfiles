@@ -49,3 +49,16 @@ else
 	echo "Skip generating, ssh key present."
 fi
 
+if [[ -f "$DOTFILES_DIRECTORY/requirements.yml" ]]; then
+
+	cd $DOTFILES_DIRECTORY
+
+	ansible-galaxy install -r requirements.yml
+
+fi
+
+
+cd "$DOTFILES_DIRECTORY"
+
+ansible-playbook --diff "$DOTFILES_DIRECTORY/main.yml"
+
