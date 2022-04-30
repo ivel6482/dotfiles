@@ -14,7 +14,7 @@ SSH_DIRECTORY="$HOME/.ssh"
 if ! [ -x "$(command -v ansible)" ]; then
 # -x when you run a script ti will show all the actions in that script.
 # -v Print the entire script as it reads the file.
-	echo "Ansible not installed"
+	echo "Ansible not installed."
 	sudo apt install software-properties-common
 	sudo add-apt-repository --yes --update ppa:ansible/ansible
 	sudo apt install ansible -y
@@ -24,12 +24,28 @@ fi
 
 # Install Vim
 if ! [ -x "$(command -v vim)" ]; then
-	echo "Vim not installed"
+	echo "Vim not installed."
 	sudo apt install vim -y
 else
 	echo "Vim already installed." 
 fi
 
 # Generate SSH keys
+if ! [[ -f "$SSH_DIRECTORY/id_rsa" ]]; then
+	mkdir -p "$SSH_DIRECTORY"
 
+# Chmod 700 (chmod a+rwx,g-rwx,o-rwx) sets permissions so that, (U)ser / owner can read, can write and can execute. (G)roup can read, can't write and can execute. (O)thers can read, can't write and can execute.
+
+	chmod 700 "$SSH_DIRECTORY"
+
+	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "$USER@$HOSTNAME"
+
+	cat "$SSH_DIRECTORY/id_rsa.pub" >> "$SSH_DIRECTORY/authorized_keys"
+
+# Chmod 600 (chmod a+rwx,u-x,g-rwx,o-rwx) sets permissions so that, (U)ser / owner can read, can write and can execute. (G)roup can read, can't write and can execute. (O)thers can read, can't write and can execute.
+
+	chmod 600 "$SSH_DIRECTORY/authorized_keys"
+else
+	echo "Skip generating, ssh key present."
+fi
 
