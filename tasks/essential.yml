@@ -1,0 +1,13 @@
+- name: Update packages
+  apt : 
+    update-cache: yes
+    upgrade: yes  
+
+- name: Install essential packages
+  package:
+    name: 
+      - vim 
+      - htop
+      - tmux
+      - neofetch
+    state: latest
