@@ -18,6 +18,7 @@ if ! [ -x "$(command -v ansible)" ]; then
 	sudo apt install software-properties-common
 	sudo add-apt-repository --yes --update ppa:ansible/ansible
 	sudo apt install ansible -y
+	pip install resolvelib==0.5.3
 else
 	echo "Ansible already installed." 
 fi
@@ -51,9 +52,9 @@ fi
 
 if [[ -f "$DOTFILES_DIRECTORY/requirements.yml" ]]; then
 
-	cd $DOTFILES_DIRECTORY
+	cd "$DOTFILES_DIRECTORY"
 
-	ansible-galaxy install -r requirements.yml
+	ansible-galaxy install -r "$DOTFILES_DIRECTORY/requirements.yml"
 
 fi
 
