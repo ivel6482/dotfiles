@@ -60,5 +60,5 @@ fi
 
 cd "$DOTFILES_DIRECTORY"
 
-ansible-playbook --diff "$DOTFILES_DIRECTORY/main.yml"
+ansible-playbook --diff -K "$DOTFILES_DIRECTORY/main.yml"
 
