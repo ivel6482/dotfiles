@@ -62,3 +62,5 @@ cd "$DOTFILES_DIRECTORY"
 
 ansible-playbook --diff -K "$DOTFILES_DIRECTORY/main.yml"
 
+# We can pass -C flag to ansible-playbook to enable dry-run which means to run the playbook without changing anything for testing purposes.
+
