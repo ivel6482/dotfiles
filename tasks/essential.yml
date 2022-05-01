@@ -1,20 +1,19 @@
 - name: Update packages
-  apt : 
-    update-cache: yes
-    upgrade: yes  
+  ansible.builtin.apt:
+    update-cache: true
+    upgrade: true
 
 - name: Install essential packages
-  package:
-    name: 
-      - vim 
+  ansible.builtin.package:
+    name:
+      - vim
       - htop
       - tmux
       - neofetch
     state: latest
 
 - name: Install github3 library
-  pip:
+  ansible.builtin.pip:
     name:
       - github3.py
     state: latest
-
