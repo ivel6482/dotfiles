@@ -7,19 +7,19 @@
   register: neovim_latest_version # register is like setting a variable
 
 - name: Report neovim lastest release
-  debug:
+  ansible.builtin.debug:
     msg: "Latest neovim version is {{ neovim_latest_version['tag'] }}"
 
 - name: Download neovim {{ neovim_latest_version['tag'] }}
-  get_url:
+  ansible.builtin.get_url:
     url: https://github.com/neovim/neovim/releases/download/{{ neovim_latest_version['tag'] }}/nvim-linux64.deb
     dest: /home/manquito/Downloads
 
 - name: Install neovim {{ neovim_latest_version['tag'] }}
-  apt:
+  ansible.builtin.apt:
     deb: /home/manquito/Downloads/nvim-linux64.deb
 
 - name: Remove neovim {{ neovim_latest_version['tag'] }} deb file
-  file:
+  ansible.builtin.file:
     state: absent
     path: /home/manquito/Downloads/nvim-linux64.deb
