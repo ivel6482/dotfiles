@@ -12,8 +12,9 @@
   ansible.builtin.git:
     repo: https://github.com/AstroNvim/AstroNvim
     dest: /home/manquito/.config/nvim
+    version: HEAD
     clone: true
     update: true
 
 - name: Install AstroNvim
-  ansible.builtin.shell: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+  ansible.builtin.command: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
