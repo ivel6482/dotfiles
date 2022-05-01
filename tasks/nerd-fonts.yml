@@ -8,6 +8,7 @@
 - name: Ubuntu mono nerd font exists
   ansible.builtin.shell: "ls {{ lookup('env', 'HOME') }}/.fonts/Ubuntu*Mono*Nerd*Font*Complete"
   register: ubuntu_mono_nerd_font_exists
+  changed_when: false
   ignore_errors: yes
 
 - name: Download Ubuntu Mono Nerd Font
