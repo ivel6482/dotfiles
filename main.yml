@@ -6,4 +6,5 @@
   tasks:
     - import_tasks: tasks/essential.yml
     - import_tasks: tasks/neovim.yml
+    - import_tasks: tasks/nerd-fonts.yml
 
