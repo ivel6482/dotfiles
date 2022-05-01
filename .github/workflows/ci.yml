@@ -10,19 +10,19 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-  steps: 
-    - uses: actions/checkout@v2
-      # - uses: actions/setup-python@v2
-      #   with:
-      #     python-version: '3.x'
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-      # - name: Install yamllint and ansible-lint
-      #   run: pip3 install yamllint ansible-lint
+      - name: Install yamllint and ansible-lint
+        run: pip3 install yamllint ansible-lint
 
-      # - name: Run yamllint
-      #   run: yamllint .
+      - name: Run yamllint
+        run: yamllint .
 
-      # - name: Run ansible-lint
-      #   run: ansible-lint -p .
+      - name: Run ansible-lint
+        run: ansible-lint -p .
 
 
