@@ -12,6 +12,7 @@
 
 - name: Download neovim {{ neovim_latest_version['tag'] }}
   ansible.builtin.get_url:
+    mode: 0644
     url: https://github.com/neovim/neovim/releases/download/{{ neovim_latest_version['tag'] }}/nvim-linux64.deb
     dest: /home/manquito/Downloads
 

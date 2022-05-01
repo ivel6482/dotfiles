@@ -10,10 +10,8 @@
       - htop
       - tmux
       - neofetch
-    state: latest
 
 - name: Install github3 library
   ansible.builtin.pip:
     name:
       - github3.py
-    state: latest
