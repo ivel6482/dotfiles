@@ -1,14 +1,13 @@
 ---
 - name: Installing AstroNvim requirements
   ansible.builtin.package:
-    name: 
+    name:
       - ripgrep
-    state: latest
 
 
 - name: Download AstroNvim
   # Set the correct permissions to the cloned directory
-  become: true 
+  become: true
   become_user: manquito
   ansible.builtin.git:
     repo: https://github.com/AstroNvim/AstroNvim
