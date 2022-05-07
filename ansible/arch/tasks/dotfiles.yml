@@ -1,0 +1,2 @@
+- name: Link dotfiles
+  ansible.builtin.shell: "cd /home/manquito/.dotfiles && stow ."
