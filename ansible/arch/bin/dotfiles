@@ -7,7 +7,7 @@ set -e
 
 # Paths
 CONFIG_DIRECTORY="$HOME/.config/dotfiles"
-DOTFILES_DIRECTORY="$HOME/.dotfiles"
+DOTFILES_DIRECTORY="$HOME/.dotfiles/ansible/arch"
 SSH_DIRECTORY="$HOME/.ssh"
 
 # Install Ansible
@@ -15,10 +15,7 @@ if ! [ -x "$(command -v ansible)" ]; then
 # -x when you run a script ti will show all the actions in that script.
 # -v Print the entire script as it reads the file.
 	echo "Ansible not installed."
-	sudo apt install software-properties-common
-	sudo add-apt-repository --yes --update ppa:ansible/ansible
-	sudo apt install ansible -y
-	pip install resolvelib==0.5.3
+	sudo pacman -S ansible
 else
 	echo "Ansible already installed." 
 fi
@@ -26,7 +23,7 @@ fi
 # Install Vim
 if ! [ -x "$(command -v vim)" ]; then
 	echo "Vim not installed."
-	sudo apt install vim -y
+	sudo pacman -S vim
 else
 	echo "Vim already installed." 
 fi
@@ -39,7 +36,7 @@ if ! [[ -f "$SSH_DIRECTORY/id_rsa" ]]; then
 
 	chmod 700 "$SSH_DIRECTORY"
 
-	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "$USER@$HOSTNAME"
+	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "velez.ilder@gmail.com"
 
 	cat "$SSH_DIRECTORY/id_rsa.pub" >> "$SSH_DIRECTORY/authorized_keys"
 
