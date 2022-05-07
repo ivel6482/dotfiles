@@ -10,6 +10,7 @@
       - tmux
       - neofetch
       - neovim
+      - stow
 
 - name: Install github3 library
   ansible.builtin.pip:
