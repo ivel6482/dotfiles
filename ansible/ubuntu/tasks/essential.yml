@@ -1,0 +1,16 @@
+- name: Update packages
+  ansible.builtin.apt:
+    update-cache: true
+    upgrade: true
+
+- name: Install essential packages
+  ansible.builtin.package:
+    name:
+      - htop
+      - tmux
+      - neofetch
+
+- name: Install github3 library
+  ansible.builtin.pip:
+    name:
+      - github3.py

@@ -3,6 +3,7 @@
   ansible.builtin.package:
     name:
       - ripgrep
+      - lazygit
 
 
 - name: Download AstroNvim

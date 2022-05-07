@@ -1,0 +1,19 @@
+---
+- name: Ensure fonts directory
+  ansible.builtin.file:
+    mode: 0755
+    path: "{{ lookup('env', 'HOME') }}/.fonts"
+    state: directory # Creates directory if it does not exists
+
+- name: Ubuntu mono nerd font exists
+  ansible.builtin.shell: "ls {{ lookup('env', 'HOME') }}/.fonts/Ubuntu*Mono*Nerd*Font*Complete"
+  register: ubuntu_mono_nerd_font_exists
+  changed_when: false
+  ignore_errors: true
+
+- name: Download Ubuntu Mono Nerd Font
+  when: ubuntu_mono_nerd_font_exists is failed
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/UbuntuMono.zip
+    dest: "{{ lookup('env', 'HOME') }}/.fonts/"
+    remote_src: true
