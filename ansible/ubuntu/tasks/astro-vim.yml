@@ -1,0 +1,23 @@
+---
+- name: Installing AstroNvim requirements
+  ansible.builtin.package:
+    name:
+      - ripgrep
+      - lazygit
+
+
+- name: Download AstroNvim
+  # Set the correct permissions to the cloned directory
+  become: true
+  become_user: manquito
+  ansible.builtin.git:
+    repo: https://github.com/AstroNvim/AstroNvim
+    dest: /home/manquito/.config/nvim
+    clone: true
+    update: true
+  tags:
+    - skip_ansible_lint
+
+- name: Install AstroNvim
+  ansible.builtin.command: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+  changed_when: false

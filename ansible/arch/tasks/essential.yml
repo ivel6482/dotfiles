@@ -6,7 +6,6 @@
 - name: Install essential packages
   ansible.builtin.package:
     name:
-      - vim
       - htop
       - tmux
       - neofetch
