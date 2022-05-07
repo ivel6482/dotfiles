@@ -7,7 +7,7 @@ set -e
 
 # Paths
 CONFIG_DIRECTORY="$HOME/.config/dotfiles"
-DOTFILES_DIRECTORY="$HOME/.dotfiles"
+DOTFILES_DIRECTORY="$HOME/.dotfiles/ansible/arch"
 SSH_DIRECTORY="$HOME/.ssh"
 
 # Install Ansible
@@ -36,7 +36,7 @@ if ! [[ -f "$SSH_DIRECTORY/id_rsa" ]]; then
 
 	chmod 700 "$SSH_DIRECTORY"
 
-	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "$USER@$HOSTNAME"
+	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "velez.ilder@gmail.com"
 
 	cat "$SSH_DIRECTORY/id_rsa.pub" >> "$SSH_DIRECTORY/authorized_keys"
 
@@ -47,18 +47,18 @@ else
 	echo "Skip generating, ssh key present."
 fi
 
-# if [[ -f "$DOTFILES_DIRECTORY/requirements.yml" ]]; then
-# 
-# 	cd "$DOTFILES_DIRECTORY"
-# 
-# 	ansible-galaxy install -r "$DOTFILES_DIRECTORY/requirements.yml"
-# 
-# fi
-# 
-# 
-# cd "$DOTFILES_DIRECTORY"
-# 
-# ansible-playbook --diff -K "$DOTFILES_DIRECTORY/main.yml"
+if [[ -f "$DOTFILES_DIRECTORY/requirements.yml" ]]; then
+
+	cd "$DOTFILES_DIRECTORY"
+
+	ansible-galaxy install -r "$DOTFILES_DIRECTORY/requirements.yml"
+
+fi
+
+
+cd "$DOTFILES_DIRECTORY"
+
+ansible-playbook --diff -K "$DOTFILES_DIRECTORY/main.yml"
 
 # We can pass -C flag to ansible-playbook to enable dry-run which means to run the playbook without changing anything for testing purposes.
 

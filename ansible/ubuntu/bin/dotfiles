@@ -7,7 +7,7 @@ set -e
 
 # Paths
 CONFIG_DIRECTORY="$HOME/.config/dotfiles"
-DOTFILES_DIRECTORY="$HOME/.dotfiles"
+DOTFILES_DIRECTORY="$HOME/.dotfiles/ansible/ubuntu"
 SSH_DIRECTORY="$HOME/.ssh"
 
 # Install Ansible
@@ -39,7 +39,7 @@ if ! [[ -f "$SSH_DIRECTORY/id_rsa" ]]; then
 
 	chmod 700 "$SSH_DIRECTORY"
 
-	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "$USER@$HOSTNAME"
+	ssh-keygen -b 4096 -t rsa -f "$SSH_DIRECTORY/id_rsa" -N "" -C "velez.ilder@gmail.com"
 
 	cat "$SSH_DIRECTORY/id_rsa.pub" >> "$SSH_DIRECTORY/authorized_keys"
 

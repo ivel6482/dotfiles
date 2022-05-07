@@ -18,6 +18,6 @@
   tags:
     - skip_ansible_lint
 
-- name: Install AstroNvim
-  ansible.builtin.command: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-  changed_when: false
+# - name: Install AstroNvim
+#   ansible.builtin.command: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+#   changed_when: false
