@@ -1,0 +1,8 @@
+---
+- name: Install nodejs
+  community.general.pacman:
+    name: nodejs
+
+- name: Install npm
+  community.general.pacman:
+    name: npm
