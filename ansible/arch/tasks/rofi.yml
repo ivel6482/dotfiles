@@ -1,0 +1,5 @@
+---
+- name: Install rofi
+  community.general.pacman:
+    name: rofi
+
