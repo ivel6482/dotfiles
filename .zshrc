@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 alias lg="lazygit"
 alias gs="git status"
 alias ls='exa -l -g --icons'
+alias cat='bat'
