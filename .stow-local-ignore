@@ -6,6 +6,7 @@ group_vars
 vim
 vscode
 vscodium
+wallpapers
 .eslint
 README.md
 ide.sh
