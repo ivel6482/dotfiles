@@ -1,4 +1,4 @@
 ---
 - name: Install polybar
-  community.general.pacman:
+  ansible.builtin.package:
     name: polybar
