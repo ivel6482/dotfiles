@@ -9,6 +9,6 @@ set -o vi
 PS1='[\u@\h \W]\$ '
 
 alias gs="git status"
-alias ls='ls -lah --color=auto'
+alias ls='exa -l -g --icons'
 alias lg="lazygit"
 alias ..="cd .."
