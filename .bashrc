@@ -12,3 +12,4 @@ alias gs="git status"
 alias ls='exa -l -g --icons'
 alias lg="lazygit"
 alias ..="cd .."
+alias cat="bat"
