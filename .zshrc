@@ -101,4 +101,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lg="lazygit"
 alias gs="git status"
-alias ls='ls -lah --color=auto'
+alias ls='exa -l -g --icons'
