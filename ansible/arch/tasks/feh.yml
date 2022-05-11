@@ -1,6 +1,6 @@
 ---
 - name: Install feh
-  community.general.pacman:
+  ansible.builtin.package:
     name: feh
 
 
