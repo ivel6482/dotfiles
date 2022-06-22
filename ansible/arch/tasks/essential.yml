@@ -11,6 +11,7 @@
       - neofetch
       - neovim
       - stow
+      - python-pip
 
 - name: Install github3 library
   ansible.builtin.pip:
