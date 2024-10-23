@@ -101,5 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lg="lazygit"
 alias gs="git status"
-alias ls='exa -l -g --icons'
+alias ls='eza -l -g --icons'
 alias cat='bat'
+alias cd="z"
+alias cdi="zi"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+eval "$(zoxide init zsh)"

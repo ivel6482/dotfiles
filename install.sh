@@ -11,4 +11,8 @@ sudo pacman -S --needed \
  xclip                  \
  fd                     \
  neovim                 \
- lazygit
+ lazygit                \
+ eza                    \
+ zoxide                 \
+ fzf                    \
+ bat
