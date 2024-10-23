@@ -15,4 +15,5 @@ sudo pacman -S --needed \
  eza                    \
  zoxide                 \
  fzf                    \
- bat
+ bat                    \
+ htop
