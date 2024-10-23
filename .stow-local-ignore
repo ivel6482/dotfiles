@@ -1,17 +1,1 @@
-.config/nvim
-.git
-.github
-ansible/
-group_vars
-vim
-vscode
-vscodium
-wallpapers
-.eslint
-README.md
-ide.sh
-install.ps1
 install.sh
-layout.png
-link.sh
-setup-mint.sh

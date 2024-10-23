@@ -1,5 +1,0 @@
----
-- name: Install rofi
-  ansible.builtin.package:
-    name: rofi
-

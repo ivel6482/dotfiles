@@ -1,4 +1,0 @@
----
-- name: Install i3-gaps
-  ansible.builtin.package:
-    name: i3-gaps
