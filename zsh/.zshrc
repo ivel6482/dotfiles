@@ -23,7 +23,7 @@ alias lg="lazygit"
 
 alias gs="git status"
 
-alias ls='eza -l -g --icons'
+alias ls='eza -lah -g --icons'
 
 alias cat='bat'
 

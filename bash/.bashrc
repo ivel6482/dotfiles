@@ -7,7 +7,7 @@ export FZF_DEFAULT_COMMAND="fd"
 
 alias gs="git status"
 
-alias ls='eza -l -g --icons'
+alias ls='eza -lah -g --icons'
 
 alias lg="lazygit"
 
