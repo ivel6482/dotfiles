@@ -26,6 +26,7 @@ alias ns="npm start"
 
 alias tls="tmux ls"
 alias ta="tmux attach"
+alias tks="tmux kill-server"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
