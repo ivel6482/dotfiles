@@ -5,6 +5,7 @@
 # - nvm
 # - tpm (tmux)
 # - oh-my-posh
+# - oh-my-zsh
 
 sudo pacman -S --needed \
  git                    \
@@ -27,4 +28,6 @@ sudo pacman -S --needed \
  coreutils              \
  jq                     \
  playerctl              \
- wezterm
+ wezterm                \
+ zsh                    \
+ zsh-autosuggestions
