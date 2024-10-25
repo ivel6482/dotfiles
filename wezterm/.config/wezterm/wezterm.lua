@@ -4,6 +4,10 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+local is_windows = wezterm.target_triple == "x86_64-pc-windows-msvc"
+
+config.default_prog = is_windows and { "C:\\Program Files\\Git\\bin\\bash.exe", "--login" } or { "/bin/zsh", "--login" }
+
 config.automatically_reload_config = true
 
 -- config.window_decorations = "RESIZE"
