@@ -4,7 +4,6 @@
 # TODO: Add:
 # - nvm
 # - tpm (tmux)
-# - starship
 
 sudo pacman -S --needed \
  git                    \
