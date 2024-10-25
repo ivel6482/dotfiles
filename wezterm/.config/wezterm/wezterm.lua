@@ -72,12 +72,12 @@ config.keys = {
 		action = wezterm.action.ActivateTabRelative(1),
 	},
 	{
-		key = '"',
+		key = "\\",
 		mods = "LEADER",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key = "%",
+		key = "-",
 		mods = "LEADER",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
