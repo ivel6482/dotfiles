@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+-- TODO: add wezterm-session-manager
 
 local config = wezterm.config_builder()
 
