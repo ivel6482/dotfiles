@@ -4,6 +4,7 @@ set -o vi
 [[ $- != *i* ]] && return
 
 export FZF_DEFAULT_COMMAND="fd"
+export PATH=$PATH:/home/$USER/.local/bin
 
 alias gs="git status"
 
