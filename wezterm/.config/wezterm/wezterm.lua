@@ -17,7 +17,7 @@ config.font_size = 20
 
 config.color_scheme = "tokyonight"
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 
 config.window_padding = {
 	top = 0,
@@ -42,7 +42,7 @@ function ToggleOpacity(window, _)
 	local overrides = window:get_config_overrides() or {}
 
 	if overrides.window_background_opacity == 1.0 then
-		overrides.window_background_opacity = 0.9
+		overrides.window_background_opacity = 0.95
 	else
 		overrides.window_background_opacity = 1.0
 	end
