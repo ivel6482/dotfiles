@@ -1,3 +1,4 @@
+-- TODO: barbar, copilot
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -834,6 +835,9 @@ require('lazy').setup({
   },
   {
     'xiyaowong/transparent.nvim',
+  },
+  {
+    'github/copilot.vim',
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
