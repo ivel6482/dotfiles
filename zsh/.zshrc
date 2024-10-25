@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# ZSH on Windows: https://dev.to/pavlosisaris/windows-command-line-revolution-unleash-zsh-and-oh-my-zsh-a-simple-guide-for-developers-271o
+
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="fd"
 export PATH=$PATH:/home/$USER/.local/bin
