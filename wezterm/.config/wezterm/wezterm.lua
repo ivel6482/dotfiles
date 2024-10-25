@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 -- TODO: add wezterm-session-manager
+-- TODO: neovim panes configuration: https://www.florianbellmann.com/blog/switch-from-tmux-to-wezterm#wezterm-meets-neovim
 
 local config = wezterm.config_builder()
 
