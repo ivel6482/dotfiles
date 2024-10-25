@@ -4,6 +4,7 @@
 # TODO: Add:
 # - nvm
 # - tpm (tmux)
+# - oh-my-posh
 
 sudo pacman -S --needed \
  git                    \
