@@ -20,4 +20,9 @@ sudo pacman -S --needed \
  zoxide                 \
  fzf                    \
  bat                    \
- htop
+ htop                   \
+ bash                   \
+ bc                     \
+ coreutils              \
+ jq                     \
+ playerctl
