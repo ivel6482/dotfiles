@@ -1,4 +1,4 @@
--- TODO: barbar, copilot
+-- TODO: barbar
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
