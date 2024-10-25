@@ -36,4 +36,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init bash)"
-eval "$(oh-my-posh init bash --config /home/scarlet/.cache/oh-my-posh/themes/robbyrussell.omp.json)"
+eval "$(oh-my-posh init bash --config ~/dotfiles/oh-my-posh/.robbyrussel-modified.omp.json)"
