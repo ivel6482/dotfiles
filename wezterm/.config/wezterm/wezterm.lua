@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 config = {
 	automatically_reload_config = true,
 	enable_tab_bar = false,
-	window_decatorations = "RESIZE",
+	-- window_decorations = "RESIZE",
 	font = wezterm.font("Terminess Nerd Font Mono", { weight = "Regular", italic = false }),
 	font_size = 20,
 	color_scheme = "tokyonight",
