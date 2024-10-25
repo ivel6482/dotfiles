@@ -4,6 +4,7 @@
 # TODO: Add:
 # - nvm
 # - tpm (tmux)
+# - starship
 
 sudo pacman -S --needed \
  git                    \
@@ -25,4 +26,5 @@ sudo pacman -S --needed \
  bc                     \
  coreutils              \
  jq                     \
- playerctl
+ playerctl              \
+ wezterm
