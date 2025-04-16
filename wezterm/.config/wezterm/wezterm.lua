@@ -4,15 +4,25 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-local is_windows = wezterm.target_triple == "x86_64-pc-windows-msvc"
+local target = wezterm.target_triple
+--local is_windows = wezterm.target_triple == "x86_64-pc-windows-msvc"
+local is_windows = target:find("windows") ~= nil
+local is_macos = target:find("apple") ~= nil
+local is_linux = target:find("linux") ~= nil
 
-config.default_prog = is_windows and { "C:\\Program Files\\Git\\bin\\bash.exe", "--login" } or { "/bin/zsh", "--login" }
+if is_macos then
+	config.default_prog = { "/bin/zsh", "--login" }
+elseif is_windows then
+	config.default_prog = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login" }
+elseif is_linux then
+	config.default_prog = { "/bin/bash", "--login" }
+end
 
 config.automatically_reload_config = true
 
 -- config.window_decorations = "RESIZE"
 
-config.font = wezterm.font("Terminess Nerd Font Mono", { weight = "Regular", italic = false })
+--config.font = wezterm.font("Terminess Nerd Font Mono", { weight = "Regular", italic = false })
 config.font_size = 20
 
 config.color_scheme = "tokyonight"
