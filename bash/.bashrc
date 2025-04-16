@@ -47,6 +47,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init bash)"
+
+if [[ ! "$PATH" == "$HOME/.fzf/bin/*" ]]; then
+	PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
+fi
 eval "$(fzf --bash)"
 
 # if $IS_WINDOWS; then
@@ -60,3 +64,5 @@ export PATH=$PATH:/usr/local/go/bin
 
 eval "$(oh-my-posh init bash --config ~/dotfiles/oh-my-posh/.robbyrussel-modified.omp.json)"
 eval "$(oh-my-posh init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
