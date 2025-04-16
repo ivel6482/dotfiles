@@ -49,12 +49,14 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 
-if $IS_WINDOWS; then
-	eval "$(oh-my-posh init bash --config ~/dotfiles/oh-my-posh/.robbyrussel-modified.omp.json)"
-fi
+# if $IS_WINDOWS; then
+# fi
 
 if $IS_LINUX_MINT; then
 	export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 fi
 
 export PATH=$PATH:/usr/local/go/bin
+
+eval "$(oh-my-posh init bash --config ~/dotfiles/oh-my-posh/.robbyrussel-modified.omp.json)"
+eval "$(oh-my-posh init bash)"
