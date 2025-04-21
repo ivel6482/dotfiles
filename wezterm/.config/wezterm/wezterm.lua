@@ -24,6 +24,7 @@ config.automatically_reload_config = true
 
 --config.font = wezterm.font("Terminess Nerd Font Mono", { weight = "Regular", italic = false })
 config.font_size = 20
+config.line_height = 1.3
 
 config.color_scheme = "tokyonight"
 
