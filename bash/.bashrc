@@ -53,6 +53,11 @@ if [[ ! "$PATH" == "$HOME/.fzf/bin/*" ]]; then
 fi
 eval "$(fzf --bash)"
 
+cdf() {
+  local dir
+  dir=$(find ${1:-.} -type d 2> /dev/null | fzf) && cd "$dir"
+}
+
 # if $IS_WINDOWS; then
 # fi
 
@@ -66,3 +71,12 @@ eval "$(oh-my-posh init bash --config ~/dotfiles/oh-my-posh/.robbyrussel-modifie
 eval "$(oh-my-posh init bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# pnpm
+export PNPM_HOME="/home/scarlet/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+. "$HOME/.cargo/env"
